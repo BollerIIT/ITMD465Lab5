@@ -31,27 +31,46 @@
 			var cnvs = canvas.getContext('2d');
 			console.log('Canvas clear');
 			
+			//creates gradient
 			var my_gradient = cnvs.createLinearGradient(0, 450, 0, 0);
 			my_gradient.addColorStop(0, "black");
 			my_gradient.addColorStop(1, "white");
 			cnvs.fillStyle = my_gradient;
 			cnvs.fillRect(20, 20, 600, 450);
 			
+			//creates triangle
 			cnvs.fillStyle = "#00C800";
 			var height = 90 * (Math.sqrt(3)/2);
 			cnvs.beginPath();
-			cnvs.moveTo(110, 280);
-			cnvs.lineTo(160, 370);
-			cnvs.lineTo(60, 370);
-			cnvs.lineTo(110, 280);
+			cnvs.moveTo(110, 260);
+			cnvs.lineTo(160, 350);
+			cnvs.lineTo(60, 350);
+			cnvs.lineTo(110, 260);
 			cnvs.fill();
 			cnvs.closePath();
 			
+			//creates bottom text
 			cnvs.fillStyle = "#FFFFFF";
 			cnvs.font = '14px sans serif';
 			cnvs.fillText('Thomas Boller', 50, 410);
 			cnvs.fillText('tboller@hawk.iit.edu', 50, 430);
 
+			//creates cirlce
+			cnvs.fillStyle = "#FFFFFF";
+			var centerX = canvas.width / 2;
+			var centerY = canvas.height / 2;
+			var radius = 55;
+
+			cnvs.beginPath();
+			cnvs.arc(110, 180, radius, 0, 2 * Math.PI, false);
+			cnvs.fillStyle = "#0000C8";
+			cnvs.fill();
+			cnvs.lineWidth = 3;
+			cnvs.strokeStyle = "#FFFFFF";
+			cnvs.stroke();
+
+			
+			//creates image
 			var img = new Image();   // Create new img element
 			img.addEventListener("load", function() {
 			console.log(img);
