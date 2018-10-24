@@ -28,8 +28,23 @@
 		  console.log('Run clicked');
 		  var canvas = document.getElementById('myCanvas');
 		  if (canvas.getContext){
-		  var ctx = canvas.getContext('2d');
+		  var cnvs = canvas.getContext('2d');
 			console.log('Canvas clear');
+			
+			var my_gradient = cnvs.createLinearGradient(0, 450, 0, 0);
+			my_gradient.addColorStop(0, "black");
+			my_gradient.addColorStop(1, "white");
+			cnvs.fillStyle = my_gradient;
+			cnvs.fillRect(20, 20, 600, 450);
+
+				var img = new Image();   // Create new img element
+				img.addEventListener("load", function() {
+				  // execute drawImage statements here
+				  console.log(img);
+				  cnvs.drawImage(img, 340, 355, 250,70);
+
+				}, false);
+				img.src = 'images/IIT_SAT_stack_186_white.png'; // Set source path
 		  } else {
 			console.log('Canvas Failed');
 		  }
