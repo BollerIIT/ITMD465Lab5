@@ -111,6 +111,18 @@
 				rectangle.strokeStyle = "#FFFFFF";
 				rectangle.strokeRect(460, 130, 110, 110);			
 
+				
+			//create wavy
+				var context = canvas.getContext('2d');
+				context.beginPath();
+				context.moveTo(360, 300);
+				context.quadraticCurveTo(360, 220, 450, 300);
+				context.moveTo(450, 300);
+				context.quadraticCurveTo(475, 350, 575, 300);
+				context.lineWidth = 3;
+				context.strokeStyle = "#000000";
+				context.setLineDash([5, 15]);
+				context.stroke();
 			
 			//creates image
 			var img = new Image();   // Create new img element
