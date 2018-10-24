@@ -26,6 +26,14 @@
 		
 		function canvasBtnHandler () {
 		  console.log('Run clicked');
+		  var canvas = document.getElementById('myCanvas');
+		  if (canvas.getContext){
+		  var ctx = canvas.getContext('2d');
+			console.log('Canvas clear');
+		  } else {
+			console.log('Canvas Failed');
+		  }
+		
 		  }
 
 		  
