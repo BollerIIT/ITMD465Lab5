@@ -51,9 +51,22 @@
 			
 			//creates bottom text
 			cnvs.fillStyle = "#FFFFFF";
-			cnvs.font = '14px sans serif';
+			cnvs.font = '14px sans-serif';
 			cnvs.fillText('Thomas Boller', 50, 410);
 			cnvs.fillText('tboller@hawk.iit.edu', 50, 430);
+			
+			//creates top text
+			cnvs.fillStyle = "#C80000";
+			cnvs.font = '32px sans-serif';
+			cnvs.fillText('ITMD 465 Canvas Lab', 175, 90);
+			
+
+			cnvs.beginPath();
+			cnvs.moveTo(35,100);
+			cnvs.lineTo(575,100);	
+			cnvs.strokeStyle = "#C80000";			
+			cnvs.stroke();
+
 
 			//creates cirlce
 			cnvs.fillStyle = "#FFFFFF";
